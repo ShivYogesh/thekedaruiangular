@@ -1,0 +1,36 @@
+.formwraper {
+    width: 550px;
+    min-height: 350px;
+    margin: auto;
+    border: 2px solid green;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+
+    
+
+}
+.formheading{
+   margin-left: 0px;
+    min-height: 50px;
+    width: 100%;
+    background-color:green; 
+    color: white;
+    font-size: 24px;
+    
+
+}
+.button {
+    width: 100%;
+    padding-top: 50px;
+    margin: auto;
+     
+}
+#idUserName,#idUserPassword{
+   width:95%;
+   margin: auto;
+
+}

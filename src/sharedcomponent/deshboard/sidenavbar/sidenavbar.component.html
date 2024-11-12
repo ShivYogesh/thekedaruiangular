@@ -1,0 +1,24 @@
+<div class="sidenavbarwraper">
+    <!--  Row For User Info Start -->
+    <!--  Row For User Info End -->
+    <!--  Row For Menu Info Start -->
+    <div class="row">
+        <ul>
+            @for(item of menuItems ;track item){
+            <div class="menudiv">
+                <li>
+                    <a routerLink="{{item.menuLink}}" class="menulink">
+                        <i class="{{item.menuIcon}} menuicon"></i>
+                        <span class="menutext">
+                            {{item.menuText}}
+                        </span>
+
+                    </a>
+                </li>
+            </div>
+
+            }
+        </ul>
+    </div>
+    <!--  Row For Menu Info End -->
+</div>

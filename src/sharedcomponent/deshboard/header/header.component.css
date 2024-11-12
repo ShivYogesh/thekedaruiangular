@@ -1,0 +1,21 @@
+.wrapper{
+    background-color: var(--headerbgcolor);
+    color:var(--headertextcolor);
+    display:flex;
+   justify-content: space-between;
+    
+}
+.brand{
+    font-size: 20px;
+    max-height: 50px;
+    width:50%;
+    text-align: left;
+    padding:5px;
+}
+.userinfo{
+    font-size: 14px;
+    max-height: 50px;
+    text-align: right;
+    width: 50%; 
+    padding:5px;
+}

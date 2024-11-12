@@ -1,0 +1,262 @@
+<div class="formwraper">
+  <!-- Form Header Start Here -->
+  <div class="row">
+    <div class="formheading">
+      {{formheading}}
+    </div>
+  </div>
+  <!-- Form Header End Here -->
+
+  <form  [formGroup]="dataform">
+
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="tenderid" class="form-label">Tender Id</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control"  formControlName="id" />
+    </div>
+<!-- Error Block Start -->
+<div class="text-danger" *ngIf="dataform.controls['id'].invalid">error!</div>
+<!-- Error Block End -->
+
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="companyname" class="form-label">Company Name</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example" formControlName="companyName">
+        @for(objval of companys;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+        
+      </select>
+      <!-- Error Block Start -->
+       <div class="text-danger" *ngIf="dataform.controls['companyName'].invalid">error! - (option Must Selected/Pls Select option)</div>
+      <!-- Error Block End -->
+    </div>
+    </div>
+    
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="department" class="form-label">Department</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example" formControlName="department">
+        @for(objval of departments;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+        
+      </select>
+       <!-- Error Block Start -->
+       <div class="text-danger" *ngIf="dataform.controls['department'].invalid">error! - (Option Must Selected/Pls Select Optetion)</div>
+      <!-- Error Block End -->
+
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="tendertype" class="form-label">Tender Type</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example" formControlName="tenderType">
+        @for(objval of tenderTypes;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+       
+      </select>
+     <!-- Error Block Start -->
+     <div class="text-danger" *ngIf="dataform.controls['tenderType'].invalid">error! - (Option Must Selected/Pls Select Option )</div>
+     <!-- Error Block End -->
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="workname" class="form-label">Work Name</label>
+    </div>
+    <div class="col-8">
+      <textarea class="form-control" id="idworkname" rows="3" placeholder="Work Name" formControlName="workName"></textarea>
+      <!-- Error Block Start -->
+    <div class="text-danger" *ngIf="dataform.controls['workName'].invalid">error! - (Blank Name is Not Allwed/Pls Type Work Name)</div>
+    <!-- Error Block End -->
+    </div>
+    
+  </div>
+  <!-- Form Control Row End Here  -->
+
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="workorderamount" class="form-label ">Work Order Amount</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control" id="idworkorderamount" placeholder="0.00" formControlName="workOrderAmount">
+    </div>
+    <!-- Error Block Start -->
+    <div class="text-danger" *ngIf="dataform.controls['workOrderAmount'].invalid">error! - (Work Order Amount must fill)</div>
+    <!-- Error Block End -->
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="workorderissue date" class="form-label">Work Order Issue Date</label>
+    </div>
+    <div class="col-8">
+      <input type="date" class="form-control" id="idworkorderdate" placeholder="" formControlName="workOrderIssueDate">
+    </div>
+    <!-- Error Block Start -->
+    <div class="text-danger" *ngIf="dataform.controls['workOrderIssueDate'].invalid">error! - (Work Order Issue Date must fill)</div>
+    <!-- Error Block End -->
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="exampleFormControlInput1" class="form-label">Completaion Date</label>
+    </div>
+    <div class="col-8">
+      <input type="date" class="form-control" id="idworkOrderCompletationDate" placeholder="" formControlName="workOrderCompletationDate">
+    </div>
+    <!-- Error Block Start -->
+    <div class="text-danger" *ngIf="dataform.controls['workOrderCompletationDate'].invalid">error! - (Work Order Issue Completation must fill)</div>
+    <!-- Error Block End -->
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="workstatus" class="form-label">Work Status</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example" formControlName="workStatus">
+        @for(objval of workStatus;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+       </select>
+      <!-- Error Block Start -->
+    <div class="text-danger" *ngIf="dataform.controls['workStatus'].invalid">error! - (Must Selected/Pls Select )</div>
+    <!-- Error Block End -->
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="pgstatus" class="form-label">P.G. Status</label>
+    </div>
+    <div class="col-8">
+
+      <select class="form-select" aria-label="Default select example" formControlName="PGStatus">
+        @for(objval of PGStatus;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+       
+      </select>
+    <!-- Error Block Start -->
+    <div class="text-danger" *ngIf="dataform.controls['PGStatus'].invalid">error! - (Must Selected/Pls Select )</div>
+    <!-- Error Block End -->
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="secstatus" class="form-label">Sec. Status</label>
+    </div>
+    <div class="col-8">
+
+      <select class="form-select" aria-label="Default select example" formControlName="secStatus">
+        @for(objval of PGStatus;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+        
+      </select>
+   <!-- Error Block Start -->
+   <div class="text-danger" *ngIf="dataform.controls['secStatus'].invalid">error! - (Must Selected/Pls Select )</div>
+   <!-- Error Block End -->
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="paymentstatus" class="form-label">Payment Status</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example" formControlName="paymentStatus">
+        @for(objval of paymentStatus;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+        
+      </select>
+       <!-- Error Block Start -->
+   <div class="text-danger" *ngIf="dataform.controls['paymentStatus'].invalid">error! - (Must Selected/Pls Select )</div>
+   <!-- Error Block End -->
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="tenderstatus" class="form-label">Tender Status</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" aria-label="Default select example" formControlName="tenderStatus">
+        @for(objval of tenderStatus;track  objval )
+        {
+          <option value="{{objval}}">{{objval}}</option>
+        }
+        
+      </select>
+       <!-- Error Block Start -->
+   <div class="text-danger" *ngIf="dataform.controls['tenderStatus'].invalid">error! - (Must Selected/Pls Select )</div>
+   <!-- Error Block End -->
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+
+  <!-- Form Control Row Start Here  -->
+  <div class="row">
+    <div class="col-4 text-end">
+      <label for="remark" class="form-label">Remark</label>
+    </div>
+    <div class="col-8">
+      <textarea class="form-control" id="remark" rows="3" placeholder="Type Your Remark Here" formControlName="remark"></textarea>
+    </div>
+  </div>
+  <!-- Form Control Row End Here  -->
+
+
+  <!-- Form Footer-->
+  <div class="formfooter row mt-3">
+    <div class="col-3"></div>
+    <div class="col-3"><input type="button" class="btn btn-danger" value="Delete"  [disabled]="dataform.invalid" /></div>
+    <div class="col-3"><input type="button" class="btn btn-success" value="UpDate" [disabled]="dataform.invalid" /></div>
+    <div class="col-3"><input type="submit" class="btn btn-primary" value="Save"   [disabled]="dataform.invalid" (click)="saveNewRecord()"/></div>
+
+
+
+  </div>
+</form>
+</div><!-- end Here <div class="formwraper"> -->
+
+
+  
