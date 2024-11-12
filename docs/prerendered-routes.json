@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/deshboard",
+    "/login",
+    "/tenderindex",
+    "/tenderindexlist",
+    "/user"
+  ]
+}
