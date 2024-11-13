@@ -9,7 +9,7 @@ import { LayoutComponent } from '../sharedcomponent/layout/layout.component';
 import { TenderIndexListComponent } from '../projectcomponent/tender-index-list/tender-index-list.component';
 
 export const routes: Routes = [
-    {path:'',redirectTo:'/login',pathMatch:'full'},
+    {path:'',redirectTo:'login',pathMatch:'full'},
    
     {path:'login',component:LoginComponent},
 
